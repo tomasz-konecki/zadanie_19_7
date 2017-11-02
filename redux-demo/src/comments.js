@@ -5,12 +5,10 @@ const comments = (state = [], action) => {
     switch (action.type) {
 
         case ADD_COMMENT:
-            console.log('ACTION ADD_COMMENT: ', state);
             return [{
                 id: action.id,
                 text: action.text,
-                votesUp: 0,
-                votesDown: 0
+                votes: 0,
             }, ...state];
             //break;
 
@@ -34,7 +32,7 @@ const comments = (state = [], action) => {
                 const index = state.comments.indexOf(check);
                 return [
                    ...state.comments.slice(0, index),
-                   {...state.comments[index], votesUp: state.comments[index].votesUp + 1},
+                   {...state.comments[index], votes: state.comments[index].votes + 1},
                    ...state.comments.slice(index+1, state.comments.length)
                 ];
             } else {
@@ -48,7 +46,7 @@ const comments = (state = [], action) => {
                 const index = state.comments.indexOf(check);
                 return [
                    ...state.comments.slice(0, index),
-                   {...state.comments[index], votesDown: state.comments[index].votesDown + 1},
+                   {...state.comments[index], votes: state.comments[index].votes - 1},
                    ...state.comments.slice(index+1, state.comments.length)
                 ];
             } else {

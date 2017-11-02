@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import CommentsList from './CommentsList'
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -19,11 +18,7 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-console.log('STATE BEFORE: ', store.getState());
-
 store.dispatch(addComment('pierwszy komentarz'));
 store.dispatch(addComment('drugi komentarz'));
-
-console.log('STATE AFTER: ', store.getState());
 
 registerServiceWorker();
