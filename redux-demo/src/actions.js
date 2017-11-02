@@ -15,7 +15,7 @@ const addComment = text => {
         id: uuid.v4()
     }
 }
-
+// eslint-disable-next-line
 const editComment = (text, id) => {
     return {
         type: EDIT_COMMENT,
@@ -23,14 +23,14 @@ const editComment = (text, id) => {
         id
     }
 }
-
+// eslint-disable-next-line
 const removeComment = id => {
     return {
         type: REMOVE_COMMENT,
         id
     }
 }
-
+// eslint-disable-next-line
 const thumbUpComment = (id, likes) => {
     return {
         type: THUMB_UP_COMMENT,
@@ -38,7 +38,7 @@ const thumbUpComment = (id, likes) => {
         votesUp: ++likes
     }
 }
-
+// eslint-disable-next-line
 const thumbDownComment = (id, dislikes) => {
     return {
         type: THUMB_DOWN_COMMENT,
@@ -46,7 +46,7 @@ const thumbDownComment = (id, dislikes) => {
         votesDown: ++dislikes
     }
 }
-
+// eslint-disable-next-line
 const addUser = (id, name) => {
     return {
         type: ADD_USER,
@@ -54,7 +54,7 @@ const addUser = (id, name) => {
         name
     }
 }
-
+// eslint-disable-next-line
 const removeUser = id => {
     return {
         type: REMOVE_USER,
@@ -62,10 +62,4 @@ const removeUser = id => {
     }
 }
 
-const boundAddComment = text => dispatch(addComment(text));
-const boundEditComment = (text, id) => dispatch(editComment(text, id));
-const boundRemoveComment = id => dispatch(removeComment(id));
-const boundThumbUpComment = (id, likes) => dispatch(thumbUpComment(id, likes));
-const boundThumbDownComment = (id, likes) => dispatch(thumbDownComment(id, dislikes));
-const boundAddUser = (id, name) => dispatch(addUser(id, name));
-const boundRemoveUser = (id, name) => dispatch(removeUser(id, name));
+export default addComment;
