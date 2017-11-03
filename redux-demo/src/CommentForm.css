@@ -1,0 +1,11 @@
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-left: 40px;
+}
+.btn-add {
+    width: 100px;
+    margin-left: 500px;
+    margin-top: 10px;
+}

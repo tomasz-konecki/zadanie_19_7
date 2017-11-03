@@ -24,44 +24,45 @@ const editComment = (text, id) => {
     }
 }
 // eslint-disable-next-line
-const removeComment = id => {
+const removeComment = commentId => {
     return {
         type: REMOVE_COMMENT,
-        id
+        id: commentId
     }
 }
 // eslint-disable-next-line
-const thumbUpComment = (commentId) => {
+const thumbUpComment = commentId => {
     return {
         type: THUMB_UP_COMMENT,
         id: commentId
     }
 }
 // eslint-disable-next-line
-const thumbDownComment = (commentId) => {
+const thumbDownComment = commentId => {
     return {
         type: THUMB_DOWN_COMMENT,
         id: commentId
     }
 }
 // eslint-disable-next-line
-const addUser = (id, name) => {
+const addUser = (userId, name) => {
     return {
         type: ADD_USER,
-        id,
+        id: userId,
         name
     }
 }
 // eslint-disable-next-line
-const removeUser = id => {
+const removeUser = userId => {
     return {
         type: REMOVE_USER,
-        id,
+        id: userId
     }
 }
 
 export {addComment};
 export {thumbUpComment};
 export {thumbDownComment};
+export {removeComment};
 
 

@@ -47,7 +47,7 @@ const comments = (state = [], action) => {
             //break;
 
         case REMOVE_COMMENT:
-            return state.comments.filter(comment => comment.id !== action.id);
+            return state.filter(comment => comment.id !== action.id);
             //break;
 
         default:
