@@ -31,19 +31,17 @@ const removeComment = id => {
     }
 }
 // eslint-disable-next-line
-const thumbUpComment = (id, likes) => {
+const thumbUpComment = (commentId) => {
     return {
         type: THUMB_UP_COMMENT,
-        id,
-        votesUp: ++likes
+        id: commentId
     }
 }
 // eslint-disable-next-line
-const thumbDownComment = (id, dislikes) => {
+const thumbDownComment = (commentId) => {
     return {
         type: THUMB_DOWN_COMMENT,
-        id,
-        votesDown: ++dislikes
+        id: commentId
     }
 }
 // eslint-disable-next-line
@@ -62,4 +60,6 @@ const removeUser = id => {
     }
 }
 
-export default addComment;
+export {addComment};
+export {thumbUpComment};
+

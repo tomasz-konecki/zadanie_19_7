@@ -27,17 +27,12 @@ const comments = (state = [], action) => {
            //break;
 
         case THUMB_UP_COMMENT:
-            check = state.comments.find(comment => (comment.id === action.id));
-            if (check) {
-                const index = state.comments.indexOf(check);
-                return [
-                   ...state.comments.slice(0, index),
-                   {...state.comments[index], votes: state.comments[index].votes + 1},
-                   ...state.comments.slice(index+1, state.comments.length)
-                ];
-            } else {
-                return state;
-            }
+            return state.map(comment => {
+                if(comment.id === action.id) {
+                return {...comment, votes: comment.votes + 1}
+                }
+            return comment;
+            });
             //break;
 
         case THUMB_DOWN_COMMENT:
