@@ -62,4 +62,6 @@ const removeUser = id => {
 
 export {addComment};
 export {thumbUpComment};
+export {thumbDownComment};
+
 
