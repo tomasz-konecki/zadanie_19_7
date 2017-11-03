@@ -1,10 +1,11 @@
 import React from 'react';
+import './Comment.css';
 
 const Comment = ({text, votes, id, thumbUpComment, thumbDownComment}) =>
   <li>
-    {text},<span>votes: {votes} </span>
-    <button onClick={() => thumbUpComment(id)}>Thumb up</button>
-    <button onClick={() => thumbDownComment(id)}>Thumb down</button>
+    <p>{text}</p><span>votes: {votes} </span>
+    <button className={'btn-up'} onClick={() => thumbUpComment(id)}>Up</button>
+    <button className={'btn-down'} onClick={() => thumbDownComment(id)}>Down</button>
 
   </li>;
 

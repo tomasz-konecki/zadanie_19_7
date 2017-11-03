@@ -1,0 +1,23 @@
+
+li {
+    background: #e5e5e5;
+    padding: 10px;
+}
+
+li:nth-of-type(even) {
+    background: #e0e0e0;
+}
+button {
+    width: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.btn-up {
+    background: #cff9dd;
+}   
+.btn-down {
+    background: #ffccd7;
+}
+p {
+    padding-bottom: 10px;
+}
