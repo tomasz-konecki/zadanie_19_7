@@ -5,11 +5,11 @@ const comments = (state = [], action) => {
     switch (action.type) {
 
         case ADD_COMMENT:
-            return [{
+            return [...state, {
                 id: action.id,
                 text: action.text,
                 votes: 0,
-            }, ...state];
+            }];
             //break;
 
         case EDIT_COMMENT:
