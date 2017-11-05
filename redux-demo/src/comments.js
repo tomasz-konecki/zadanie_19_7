@@ -10,7 +10,6 @@ const comments = (state = [], action) => {
                 text: action.text,
                 votes: 0,
             }];
-            //break;
 
         case EDIT_COMMENT:
             let check = state.comments.find(comment => (comment.id === action.id));
@@ -24,7 +23,6 @@ const comments = (state = [], action) => {
             } else {
                 return state;
             }
-           //break;
 
         case THUMB_UP_COMMENT:
             return state.map(comment => {
@@ -33,7 +31,6 @@ const comments = (state = [], action) => {
                 }
             return comment;
             });
-            //break;
 
         case THUMB_DOWN_COMMENT:
             return state.map(comment => {
@@ -44,11 +41,9 @@ const comments = (state = [], action) => {
                 }
             return comment;
             });
-            //break;
 
         case REMOVE_COMMENT:
             return state.filter(comment => comment.id !== action.id);
-            //break;
 
         default:
             return state;

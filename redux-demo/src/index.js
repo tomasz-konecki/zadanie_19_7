@@ -20,6 +20,5 @@ ReactDOM.render(
 
 store.dispatch(addComment('pierwszy komentarz'));
 store.dispatch(addComment('drugi komentarz'));
-store.dispatch(addComment('trzeci komentarz'));
 
 registerServiceWorker();

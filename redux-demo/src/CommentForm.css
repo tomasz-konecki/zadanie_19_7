@@ -9,3 +9,6 @@ form div {
     margin-left: 500px;
     margin-top: 10px;
 }
+label {
+    text-align: left;
+}
