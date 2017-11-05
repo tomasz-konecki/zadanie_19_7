@@ -8,8 +8,11 @@ const CommentForm = add =>
             <textarea id="new_comment" name="new_comment" rows="6"></textarea>
         </div>
         <div>
-            <button className="btn-add" onClick={(e) => {e.preventDefault(); 
-                add.addComment(document.getElementById("new_comment").value)}}>Submit</button>
+            <button className="btn-add" onClick={(e) => {e.preventDefault();
+                const form = document.getElementById("new_comment");
+                add.addComment(form.value);
+                form.value = "";}}>
+            Submit</button>
         </div>
     </form>
 
