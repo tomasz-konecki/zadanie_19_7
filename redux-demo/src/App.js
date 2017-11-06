@@ -3,10 +3,11 @@ import './App.css';
 import CommentsListContainer from './CommentsListContainer';
 import CommentFormContainer from './CommentFormContainer';
 
-const App = () => 
+const App = () => (
     <div className="App">
         <CommentsListContainer />
         <CommentFormContainer />
     </div>
+)
 
 export default App;
