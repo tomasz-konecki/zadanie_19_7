@@ -8,7 +8,7 @@ const comments = (state = [], action) => {
             return [...state, {
                 id: action.id,
                 text: action.text,
-                votes: 0,
+                votes: 0
             }];
 
         case EDIT_COMMENT:
