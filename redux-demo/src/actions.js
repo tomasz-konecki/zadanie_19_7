@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import uuid from 'uuid';
 
 export const ADD_COMMENT = 'ADD_COMMENT';
@@ -8,14 +10,35 @@ export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 export const ADD_USER = 'ADD_USER';
 export const REMOVE_USER = 'REMOVE_USER';
 
-const addComment = text => {
+export const addComment = text => {
     return {
         type: ADD_COMMENT,
         text,
         id: uuid.v4()
     }
 }
-// eslint-disable-next-line
+
+export const removeComment = commentId => {
+    return {
+        type: REMOVE_COMMENT,
+        id: commentId
+    }
+}
+
+export const thumbUpComment = commentId => {
+    return {
+        type: THUMB_UP_COMMENT,
+        id: commentId
+    }
+}
+
+export const thumbDownComment = commentId => {
+    return {
+        type: THUMB_DOWN_COMMENT,
+        id: commentId
+    }
+}
+
 const editComment = (text, id) => {
     return {
         type: EDIT_COMMENT,
@@ -23,28 +46,7 @@ const editComment = (text, id) => {
         id
     }
 }
-// eslint-disable-next-line
-const removeComment = commentId => {
-    return {
-        type: REMOVE_COMMENT,
-        id: commentId
-    }
-}
-// eslint-disable-next-line
-const thumbUpComment = commentId => {
-    return {
-        type: THUMB_UP_COMMENT,
-        id: commentId
-    }
-}
-// eslint-disable-next-line
-const thumbDownComment = commentId => {
-    return {
-        type: THUMB_DOWN_COMMENT,
-        id: commentId
-    }
-}
-// eslint-disable-next-line
+
 const addUser = (userId, name) => {
     return {
         type: ADD_USER,
@@ -52,17 +54,11 @@ const addUser = (userId, name) => {
         name
     }
 }
-// eslint-disable-next-line
+
 const removeUser = userId => {
     return {
         type: REMOVE_USER,
         id: userId
     }
 }
-
-export {addComment};
-export {thumbUpComment};
-export {thumbDownComment};
-export {removeComment};
-
 

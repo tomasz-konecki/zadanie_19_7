@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommentForm.css';
 
-const CommentForm = add =>
+const CommentForm = add => (
     <form>
         <div>
             <label htmlFor="new_comment">Add a comment:</label>
@@ -15,5 +15,6 @@ const CommentForm = add =>
             Submit</button>
         </div>
     </form>
+)
 
 export default CommentForm;
